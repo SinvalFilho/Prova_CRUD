@@ -1,0 +1,41 @@
+POST http://localhost:5555/user
+Content-Type: application/json
+{
+    "nome": "Fulano",
+    "email": "Fulano@gmail.com"
+}
+###
+POST http://localhost:5555/user
+Content-Type: application/json
+{
+    "nome": "Ciclano",
+    "email": "Ciclano@gmail.com"
+}
+###
+GET  http://localhost:5555/user
+###
+GET http://localhost:5555/user/1
+###
+GET http://localhost:5555/user/10
+###
+PUT  http://localhost:5555/user/2
+Content-Type: application/json
+
+{
+    "name": "Ciclano Fulano",
+    "email": "ciclanofulano@gmail.com"
+}
+###
+PUT  http://localhost:5555/user/1
+Content-Type: application/json
+
+{
+    "name": "Fulano Ciclano",
+    "email": "fulanociclano@gmail.com"
+}
+###
+DELETE  http://localhost:5555/user/2
+###
+DELETE  http://localhost:5555/user/1
+###
+DELETE  http://localhost:5555/user/3
