@@ -1,24 +1,30 @@
-POST http://localhost:5555/user
+POST http://localhost:3333/user
 Content-Type: application/json
 {
     "nome": "Fulano",
     "email": "Fulano@gmail.com"
 }
+POST http://localhost:3333/user
+Content-Type: application/json
+{
+    "nome": "Fulano Filho",
+    "email": "Fulano@gmail.com"
+}
 ###
-POST http://localhost:5555/user
+POST http://localhost:3333/user
 Content-Type: application/json
 {
     "nome": "Ciclano",
     "email": "Ciclano@gmail.com"
 }
 ###
-GET  http://localhost:5555/user
+GET  http://localhost:3333/user
 ###
-GET http://localhost:5555/user/1
+GET http://localhost:3333/user/1
 ###
-GET http://localhost:5555/user/10
+GET http://localhost:3333/user/10
 ###
-PUT  http://localhost:5555/user/2
+PUT  http://localhost:3333/user/2
 Content-Type: application/json
 
 {
@@ -26,7 +32,7 @@ Content-Type: application/json
     "email": "ciclanofulano@gmail.com"
 }
 ###
-PUT  http://localhost:5555/user/1
+PUT  http://localhost:3333/user/1
 Content-Type: application/json
 
 {
@@ -34,8 +40,8 @@ Content-Type: application/json
     "email": "fulanociclano@gmail.com"
 }
 ###
-DELETE  http://localhost:5555/user/2
+DELETE  http://localhost:3333/user/2
 ###
-DELETE  http://localhost:5555/user/1
+DELETE  http://localhost:3333/user/1
 ###
-DELETE  http://localhost:5555/user/3
+DELETE  http://localhost:3333/user/3
