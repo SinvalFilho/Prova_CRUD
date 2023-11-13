@@ -10,7 +10,7 @@ app.get("/user", async (req, res) => {
     const clients = await prisma.client.findMany();
     return res.json(clients);
   } catch (error) {
-    return res.status(500).json({ error: "Erro ao buscar usuários" });
+    return res.status(500).json({ error: "Usuário não encontrado" });
   }
 });
 
@@ -42,7 +42,7 @@ app.post("/user", async (req, res) => {
     });
     
     if (existingUser) {
-      return res.status(400).json({ error: "Email já existente" });
+      return res.status(400).json({ error: "Email já cadastrado" });
     }
 
     const newUser = await prisma.client.create({
@@ -93,4 +93,4 @@ app.delete("/user/:id", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3333;
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`));
